@@ -15,6 +15,9 @@ class Course extends Model
     const BORRADOR = 1;
     const REVISION = 2;
     const PUBLICADO = 3; 
+    public function getRatingAttribute(){
+        return $this->reviews->avg('rating');
+    }
 
     //Relacion 1 a muchos
     public function reviews(){
