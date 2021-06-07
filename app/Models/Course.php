@@ -9,6 +9,7 @@ class Course extends Model
 {
     use HasFactory;
     protected $guarded =['id','status'];
+    protected $withCount=['students'];
 
 
     const BORRADOR = 1;
