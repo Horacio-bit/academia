@@ -24,6 +24,10 @@ class Course extends Model
             return 5;
         }
     }
+    public function getRouteKeyName()
+    {
+        return "slug";
+    }
 
     //Relacion 1 a muchos
     public function reviews(){
